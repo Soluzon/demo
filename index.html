@@ -1,75 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Laundry Walla / Laundry Mart</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background-color: #f9fafb;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links li {
+      cursor: pointer;
+      color: #333;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links li:hover {
+      color: #007bff;
+    }
+
+    .username-btn {
+      background-color: #e5f1ff;
+      color: #007bff;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      border: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: calc(100vh - 72px);
+      padding: 0 3rem;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.2;
+      color: #1e293b;
+    }
+
+    .hero-text h1 span {
+      color: #007bff;
+    }
+
+    .hero-text p {
+      margin-top: 1rem;
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-text button {
+      margin-top: 1.5rem;
+      background-color: #007bff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero-text button:hover {
+      background-color: #0056b3;
+    }
+
+    .hero img {
+      width: 420px;
+      height: auto;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        height: auto;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero img {
+        margin-top: 2rem;
+        width: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Header Section -->
-    <h1>Welcome to Laundry Wallah / Laundry Mart</h1>
-
-    <!-- About Section -->
-    <h2>About Us</h2>
-    <p>
-        Laundry Wallah / Laundry Mart is your trusted partner for all laundry needs. 
-        We provide high-quality, reliable, and affordable laundry services to make your life easier. 
-        Whether it's regular washing or delicate garment care, we ensure your clothes get the attention they deserve. 
-        With our experienced team and advanced equipment, we deliver excellent results every time. 
-        Convenience, cleanliness, and customer satisfaction are at the core of our service.
-    </p>
-
-    <!-- Image Section -->
-    <h2>Our Facility</h2>
-    <img src="laundry.jpeg" alt="Laundry Image" width="500">
-
-    <!-- Services Section -->
-    <h2>Our Services</h2>
-    <ul>
-        <li>Washing and Drying</li>
-        <li>Ironing and Folding</li>
-        <li>Dry Cleaning</li>
-        <li>Stain Removal</li>
-        <li>Express Services</li>
-        <li>Special Garment Care</li>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Logo</div>
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>Services</li>
+      <li>About Us</li>
+      <li>Contact Us</li>
     </ul>
+    <button class="username-btn">Username</button>
+  </nav>
 
-    <!-- Price List Section -->
-    <h2>Price List</h2>
-    <table border="1">
-        <tr>
-            <th>Service</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Washing and Drying</td>
-            <td>Rs 10.00</td>
-        </tr>
-        <tr>
-            <td>Ironing and Folding</td>
-            <td>Rs 5.00</td>
-        </tr>
-    </table>
-
-    <!-- Book Now Section -->
-    <h2>Book Now</h2>
-    <form action="#" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="phone">Phone:</label><br>
-        <input type="tel" id="phone" name="phone" required><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>Contact us at: <a href="mailto:info@laundrymart.com">info@laundrymart.com</a></p>
-    </footer>
-
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>
+        Revitalize Your Clothes with Expert <span>Laundry Services!</span>
+      </h1>
+      <p>
+        From premium dry cleaning to swift wash and fold, we deliver care and convenience.
+        Schedule a pickup and rediscover the freshness of your clothes today!
+      </p>
+      <button>Book a service today!</button>
+    </div>
+    <img src="laundry.jpeg" alt="Laundry Machine" />
+  </section>
 </body>
 </html>
